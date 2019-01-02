@@ -1,0 +1,55 @@
+/**index.wxss**/
+
+.login-content {
+  position: absolute;
+  top: 500rpx;
+  left: 13%;
+}
+
+.weui-label {
+  width: 75px;
+  border-right: 1px solid silver;
+}
+
+.login {
+  padding: 10px 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 35px;
+  /* border-bottom: 1px solid silver; */
+  border-radius: 4px;
+  width: 80%;
+  margin-bottom: 10px;
+  border: 1px solid silver;
+}
+
+.login > view:nth-child(2) {
+  margin-left: 5px;
+}
+
+.login-password {
+  display: flex;
+  align-items: center;
+  justify-content: space-bettwen;
+}
+.login-password > image {
+  width: 50rpx;
+  height: 50rpx;
+  flex-shrink: 0; 
+}
+
+.index_btn {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+button {
+  width: 90%;
+  margin-left: 0;
+}

@@ -1,0 +1,79 @@
+<!--pages/input/inputbp/inputbp.wxml-->
+<view class='page'>
+  <form bindsubmit='bpformSubmit' bindreset='formReset'>
+
+    <view class="weui-cells__title">测量时间：</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">日期</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="date" value='{{date_bp}}' start="2017-11-1" end="2018-11-1" bindchange='bindDateChange'>
+            <view class='weui-input'>{{date_bp}}</view>
+          </picker>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">时间</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="time" value='{{time_bp}}' start="00:00" end="23:59" bindchange='bindTimeChange'>
+            <view class='weui-input'>{{time_bp}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__title">血压值：</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">收缩压</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input type='number' class='weui-input' placeholder='单位mmHg' value='{{hbp_bp}}' bindinput='bindInputHbp' />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">舒张压</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input type='number' class='weui-input' placeholder='单位mmHg' value='{{lbp_bp}}' bindinput='bindInputLbp' />
+        </view>
+      </view>
+    </view>
+
+
+    <view class="weui-cells__title">心率值（bpm）：</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">心率</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input type='number' class='weui-input' placeholder='单位bpm' value='{{hr_bp}}' bindinput='bindInputHr' />
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">备注：</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="若有特殊说明，请备注" style="height: 3.3em" value='{{comment_bp}}' bindinput='bindInputCom' />
+
+        </view>
+      </view>
+    </view>
+
+    <block wx:if="{{id!=0}}">
+      <button form-type='submit' type='primary'>确定修改</button>
+      <button form-type='reset' type="warn">删除</button>
+    </block>
+    <block wx:else>
+      <button bindtap='finish' type='primary'>完成</button>
+    </block>
+  </form>
+</view>

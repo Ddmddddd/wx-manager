@@ -1,0 +1,11 @@
+<!--pages/evaluate/evaluate.wxml-->
+<view class='container'>
+  <view class=" charts_item">
+  </view>
+  <navigator class='record-item' url='../input/inputevaluate/inputevaluate'>
+    <view class='record-item-add'>
+      <view class='add-icon'>+</view>
+      <view class='add-title'>评估一次</view>
+    </view>
+  </navigator>
+</view>

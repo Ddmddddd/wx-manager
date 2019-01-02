@@ -1,0 +1,19 @@
+/* pages/medicine/medicine.wxss */
+@import '../bp/bp.wxss';
+.history-list {
+  display: flex;
+  width: 60%;
+  height: 90%;
+  overflow: auto;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-direction: column;
+  padding-right: 15px;
+
+}
+
+.history-list-item {
+  font-size: 15px;
+  color: #188df0;
+  flex-shrink: 1;
+}

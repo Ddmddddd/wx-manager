@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class='container'>
+  <image mode="aspectFill" style="width:100vw;height:100vh" src="../../image/login4.jpg" />
+
+  <view class="login-content">
+    <view class="login">
+      <view class="weui-cell__hd">
+        <view class="weui-label">账号</view>
+      </view>
+      <view class="weui-cell__bd login-username">
+        <input class='weui-input' type="text" bindinput="userNameInput" />
+      </view>
+    </view>
+    <view class="login">
+      <view class="weui-cell__hd">
+        <view class="weui-label">密码</view>
+      </view>
+      <view class="weui-cell__bd login-password">
+        <input class='weui-input' type="text" bindinput="userPasswordInput" password="{{!showPsw}}" />
+        <image src="{{ showPsw ? '../../image/open-eyes.png' : '../../image/close-eyes.png' }}" bindtap="switchShowPassword"></image>
+      </view>
+    </view>
+    <view class='index_btn'>
+      <button style='color:white;background-color:lightskyblue' bindtap="logIn">登陆</button>
+      <button bindtap="register">注册</button>
+    </view>
+
+
+  </view>
+</view>

@@ -1,0 +1,60 @@
+<!--pages/input/inputwg/inputwg.wxml-->
+<view class='page'>
+  <form bindsubmit='wgformSubmit' bindreset='formReset'>
+
+    <view class="weui-cells__title">测量时间：</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">日期</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="date" value='{{date_wg}}' start="2017-11-1" end="2018-11-1" bindchange='bindDateChange'>
+            <view class='weui-input'>{{date_wg}}</view>
+          </picker>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">时间</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="time" value='{{time_wg}}' start="00:00" end="23:59" bindchange='bindTimeChange'>
+            <view class='weui-input'>{{time_wg}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">体重值：</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">体重</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class='weui-input' type='digit' placeholder='单位kg' value='{{weight}}' bindinput='bindInputWeight' />
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">备注：</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="若有特殊说明，请备注" style="height: 3.3em" value='{{comment_wg}}' bindinput='bindInputCom'  />
+
+        </view>
+      </view>
+    </view>
+
+    <block wx:if="{{id!=0}}">
+      <button form-type='submit' type='primary'>确定修改</button>
+      <button form-type='reset' type="warn">删除</button>
+    </block>
+    <block wx:else>
+      <button bindtap='finish' type='primary'>完成</button>
+    </block>
+  </form>
+</view>
+

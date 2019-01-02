@@ -1,0 +1,162 @@
+<!-- pages/register/register.wxml -->
+<view class='page'>
+  <image class="" mode="aspectFill" style="width:100vw;height:100vh" src="../../image/register1.jpg" />
+  <view wx:if="{{validate==1}}" class="" style="position:absolute;top:150px;left:5%">
+    <view class="registe">
+      <view class="weui-cell__hd">
+        <view class="weui-label">姓名</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class='weui-input' type="text" value="{{patientName}}" bindblur="patientNameInput" bindinput="patientNameInput" />
+      </view>
+    </view>
+    <view class="registe">
+      <view class="weui-cell__hd">
+        <view class="weui-label">病历号</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class='weui-input' type="text" bindinput="patientIdInput" />
+      </view>
+    </view>
+    <button bindtap="validate">身份核验</button>
+  </view>
+  <view wx:elif="{{validate==2}}" class="" style="position:absolute;top:25px;left:5%">
+    <text class='registe_title'>个人信息</text>
+    <view class="registe">
+      <view class="weui-cell__hd">
+        <view class="weui-label">昵称</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class='weui-input' type="text" bindinput="nickNameInput" bindblur="nickNameInput" />
+      </view>
+    </view>
+    <view class="registe">
+      <view class="weui-cell__hd">
+        <view class="weui-label">密码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class='weui-input' type="text" bindinput="passWordInput" placeholder='长度不小于6位' />
+      </view>
+    </view>
+    <view class="registe">
+      <view class="weui-cell__hd">
+        <view class="weui-label">确认密码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class='weui-input' type="text" bindinput="passWordCheckInput" placeholder='请再次输入密码' />
+      </view>
+    </view>
+    <view class="registe">
+      <view class="weui-cell__hd">
+        <view class="weui-label">身份证号码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class='weui-input' type="idcard" bindinput="idcardNumberInput"  />
+      </view>
+    </view>
+    <view class="registe">
+      <view class="weui-cell__hd">
+        <view class="weui-label">手机号码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class='weui-input' type="number" bindinput="phoneNumberInput" />
+      </view>
+    </view>
+    <view class="registe">
+      <view class="weui-cell__hd">
+        <view class="weui-label">学历</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="selector" value='{{education}}' range='{{educationArr}}' bindchange='bindeducationChange'>
+          <view class='weui-input'>{{education}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="registe">
+      <view class="weui-cell__hd">
+        <view class="weui-label">职业</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="selector" value='{{profession}}' range='{{professionArr}}' bindchange='bindprofessionChange'>
+          <view class='weui-input'>{{profession}}</view>
+        </picker>
+      </view>
+    </view>
+    <button bindtap="nextstep">下一步</button>
+  </view>
+  <view wx:elif="{{validate==3}}" class="" style="position:absolute;top:25px;left:5%">
+    <text class='registe_title'>管理信息</text>
+    <view class="registe">
+      <view class="weui-cell__hd">
+        <view class="weui-label">性别</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="selector" value='{{sex}}' range='{{sexArr}}' bindchange='bindsexChange'>
+          <view class='weui-input'>{{sex}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="registe">
+      <view class="weui-cell__hd">
+        <view class="weui-label">出生日期</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="date" value='{{birthDate}}' start="1900-01-01" end="2018-01-01" bindchange="bindbirthDateChange">
+          <view class='weui-input'>{{birthDate}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="registe">
+      <view class="weui-cell__hd">
+        <view class="weui-label">身高</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class='weui-input' type="digit" bindinput="heightInput" placeholder='单位cm' />
+      </view>
+    </view>
+    <view class="registe">
+      <view class="weui-cell__hd">
+        <view class="weui-label">体重</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class='weui-input' type="digit" bindinput="weightInput" placeholder='单位kg' />
+      </view>
+    </view>
+    <!-- <text class='registe_title'>医院绑定</text> -->
+    <view class="registe">
+      <view class="weui-cell__hd">
+        <view class="weui-label">地区</view>
+      </view>
+      <view class="weui-cell__bd">
+        <!-- <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArr}}" range-key='name'>
+          <view class='weui-input'>{{region.name}}</view>
+        </picker> -->
+        <picker mode="selector" bindchange="bindRegionChange" value="{{regionIndex}}" range="{{regionArr}}" range-key='name'>
+          <view class='weui-input'>{{region.name}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="registe">
+      <view class="weui-cell__hd">
+        <view class="weui-label">医院</view>
+      </view>
+      <view class="weui-cell__bd">
+        <!-- <view class='weui-input' style='overflow:hidden'>{{hospital.name}}</view> -->
+        <picker mode="selector" bindchange="bindHospitalChange" value="{{hospitalIndex}}" range="{{hospitalArr}}" range-key='name'>
+          <view class='weui-input' style='overflow:hidden'>{{hospital.name}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="registe">
+      <view class="weui-cell__hd">
+        <view class="weui-label">医师</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="selector" bindchange="bindManagerChange" value="{{managerIndex}}" range="{{managerArr}}" range-key='name'>
+          <view class='weui-input'>{{manager.name}}</view>
+        </picker>
+      </view>
+    </view>
+    <button bindtap="register" type='primary'>完成</button>
+  </view>
+</view>

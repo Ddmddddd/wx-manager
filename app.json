@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/homepage/homepage",
+    "pages/setting/setting",
+    "pages/bp/bp",
+    "pages/weight/weight",
+    "pages/medicine/medicine",
+    "pages/sports/sports",
+    "pages/uncomf/uncomf",
+    "pages/eat/eat",
+    "pages/charts/bplinechart/bplinechart",
+    "pages/charts/wgareachart/wgareachart",
+    "pages/input/inputbp/inputbp",
+    "pages/input/inputmed/inputmed",
+    "pages/input/inputwg/inputwg",
+    "pages/input/inputfood/inputfood",
+    "pages/input/inputuncomf/inputuncomf",
+    "pages/input/inputsport/inputsport",
+    "pages/user/user",
+    "pages/message/message",
+    "pages/mescontent/mescontent",
+    "pages/register/register",
+    "pages/input/inputtip/inputtip",
+    "pages/report/report",
+    "pages/rank/rank",
+    "pages/bindUserInfo/bindid/bindid",
+    "pages/bindUserInfo/bindmail/bindmail",
+    "pages/bindUserInfo/bindphone/bindphone",
+    "pages/bindUserInfo/bindpassword/bindpassword",
+    "pages/share/share",
+    "pages/class/class-index/class-index",
+    "pages/class/class-learn/class-learn",
+    "pages/class/class-sub/class-sub",
+    "pages/evaluate/evaluate",
+    "pages/input/inputevaluate/inputevaluate",
+    "pages/result/result"
+  ],
+  "window": {
+    "navigationBarTitleText": "血压助手",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#f2f2f2",
+    "navigationBarBackgroundColor": "#fbfbfb",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#3e9afe",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "image/homepage_fill.png",
+        "iconPath": "image/homepage.png",
+        "pagePath": "pages/homepage/homepage",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "image/message_fill.png",
+        "iconPath": "image/message.png",
+        "pagePath": "pages/message/message",
+        "text": "资讯"
+      },
+      {
+        "selectedIconPath": "image/mine_fill.png",
+        "iconPath": "image/mine.png",
+        "pagePath": "pages/setting/setting",
+        "text": "我的"
+      }
+    ]
+  }
+}

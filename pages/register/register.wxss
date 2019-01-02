@@ -1,0 +1,26 @@
+/* pages/register/register.wxss */
+page{
+  background-color:rgb(226, 247,252)
+}
+.registe{  
+  padding: 10px 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 35px;
+  border-bottom: 1px solid white;
+  width: 90%;
+  margin-bottom: 10px;
+  }
+  .registe_title{
+    font-size: 16pt;
+
+  }
+  button {
+  margin-left: 12%;
+  margin-top: 40px;
+  }

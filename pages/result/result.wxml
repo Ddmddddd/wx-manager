@@ -1,0 +1,29 @@
+<!--pages/result/result.wxml-->
+<view class='container'>
+  <view class='title'>三种不同评估模型的评估结果</view>
+  <view class='threemode'>
+    <view class='modetype'>
+      <view class='modetitle'>WHO模型</view>
+      <view class='moderesult'>风险</view>
+    </view>
+    <view class='modetype'>
+      <view class='modetitle'>弗兰明翰模型</view>
+      <view class='moderesult'>风险</view>
+    </view>
+    <view class='modetype'>
+      <view class='modetitle'>ICVD模型</view>
+      <view class='moderesult'>风险</view>
+    </view>
+  </view>
+  <view class='lead'>
+	  <image src="../../image/leadto.png" mode="aspectFit" style="width:100%;height:100%;"></image>
+  </view>
+  <view class='totaltitle'>综合风险</view>
+  <view class='totalresult'>风险</view>
+
+  <view class='risktitle'>您目前的风险因素如下：</view>
+  <view class='riskitem'>风险因素1</view>
+  <view class='riskitem'>风险因素2</view>
+  <button class='advise' bindtap='advise' type='warn'>查看建议</button>
+  <button bindtap='know' type='primary'>已知晓</button>
+</view>

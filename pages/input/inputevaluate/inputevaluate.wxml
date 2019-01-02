@@ -1,0 +1,137 @@
+<!--pages/input/inputevaluate/inputevaluate.wxml-->
+<view class='container'>
+  <view class='item' bindtap='drink'>
+    <view class="paddinghalfrem card-content">
+      <image class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+        <text class='texttitle4'>是否饮酒</text>
+    </view>
+  </view>
+
+  <view class="modal-mask" style='z-index: 90;' bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showdrink}}"></view>
+  <view class="modal-dialog" style='z-index: 99' wx:if="{{showdrink}}">
+    <view class="modal-title">是否饮酒</view>
+    <view class='paddinghalfrem card-content'>
+      <switch checked='{{drink&1}}' class='weui-cell_switch' bindchange='switch0'/><view class='switch-text'>饮酒</view>
+    </view>
+   <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" >确定</view>
+   </view>
+  </view>
+
+  <view class='item' bindtap='smoke'>
+    <view class="paddinghalfrem card-content">
+      <image class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+        <text class='texttitle4'>是否吸烟</text>
+    </view>
+  </view>
+
+    <view class="modal-mask" style='z-index: 90;' bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showsmoke}}"></view>
+  <view class="modal-dialog" style='z-index: 99' wx:if="{{showsmoke}}">
+    <view class="modal-title">是否吸烟</view>
+    <view class='paddinghalfrem card-content'>
+      <switch checked='{{smoke&1}}' class='weui-cell_switch' bindchange='switch0'/><view class='switch-text'>吸烟</view>
+    </view>
+   <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" >确定</view>
+   </view>
+  </view>
+
+  <view class='item' bindtap='diabetes'>
+    <view class="paddinghalfrem card-content">
+      <image class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+        <text class='texttitle'>有无糖尿病</text>
+    </view>
+  </view>
+
+  <view class="modal-mask" style='z-index: 90;' bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showdiabetes}}"></view>
+  <view class="modal-dialog" style='z-index: 99' wx:if="{{showdiabetes}}">
+    <view class="modal-title">有无糖尿病</view>
+    <view class='paddinghalfrem card-content'>
+      <switch checked='{{diabetes&1}}' class='weui-cell_switch' bindchange='switch0'/><view class='switch-text'>有糖尿病</view>
+    </view>
+   <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" >确定</view>
+   </view>
+  </view>
+
+  <view class='item' bindtap='tbc'>
+    <view class="paddinghalfrem card-content">
+      <image class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+        <text class='texttitle'>血总胆固醇</text>
+    </view>
+  </view>
+
+  <view class="modal-mask" style='z-index: 90;' bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showtbc}}"></view>
+  <view class="modal-dialog" style='z-index: 99' wx:if="{{showtbc}}">
+    <view class="modal-title">血总胆固醇</view>
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="text"  bindinput="none" class="input" placeholder="单位mmol/L"></input>
+    </view>
+   <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" >确定</view>
+   </view>
+  </view>
+
+  <view class='item' bindtap='Hdlc'>
+    <view class="paddinghalfrem card-content">
+      <image class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+        <text class='texttitle2'>高密度脂蛋白胆固醇</text>
+    </view>
+  </view>
+
+  <view class="modal-mask" style='z-index: 90;' bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showHdlc}}"></view>
+  <view class="modal-dialog" style='z-index: 99' wx:if="{{showHdlc}}">
+    <view class="modal-title">高密度脂蛋白胆固醇</view>
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="text"  bindinput="none" class="input" placeholder="单位mmol/L"></input>
+    </view>
+   <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" >确定</view>
+   </view>
+  </view>
+
+  <view class='item' bindtap='Bheight'>
+    <view class="paddinghalfrem card-content">
+      <image class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+        <text class='texttitle3'>身高</text>
+    </view>
+  </view>
+
+  <view class="modal-mask" style='z-index: 90;' bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showBheight}}"></view>
+  <view class="modal-dialog" style='z-index: 99' wx:if="{{showBheight}}">
+    <view class="modal-title">身高</view>
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="text"  bindinput="none" class="input" placeholder="单位cm"></input>
+    </view>
+   <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" >确定</view>
+   </view>
+  </view>
+
+  <view class='item' bindtap='Bweight'>
+    <view class="paddinghalfrem card-content">
+      <image class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+        <text class='texttitle3'>体重</text>
+    </view>
+  </view>
+
+  <view class="modal-mask" style='z-index: 90;' bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showBweight}}"></view>
+  <view class="modal-dialog" style='z-index: 99' wx:if="{{showBweight}}">
+    <view class="modal-title">体重</view>
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="text"  bindinput="none" class="input" placeholder="单位kg"></input>
+    </view>
+   <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" >确定</view>
+   </view>
+  </view>
+
+  <button bindtap='finishevaluate' class='finish-button' type='primary'>完成</button>
+</view>

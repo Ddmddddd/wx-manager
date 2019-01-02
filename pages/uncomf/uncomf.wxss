@@ -1,0 +1,20 @@
+/* pages/uncomf/uncomf.wxss */
+@import '../bp/bp.wxss';
+.history-list {
+  display: flex;
+  width: 60%;
+  height: 90%;
+  overflow: auto;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 15px;
+
+}
+
+.history-list-item {
+  font-size: 18px;
+  color: #188df0;
+  flex-shrink: 1;
+  line-height: 20px
+}
