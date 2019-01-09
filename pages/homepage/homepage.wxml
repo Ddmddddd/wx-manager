@@ -101,7 +101,7 @@
     <navigator url="../evaluate/evaluate" class=" nav-grid-item">
       <view class="paddinghalfrem grid-content ">
         <view class="text-item-grid">
-          <image class="image-grid" mode='aspectFit' src='../../image/rank.png' />
+          <image class="image-grid" mode='aspectFit' src='../../image/evaluate.png' />
           <text class="text-title">评估</text>
         </view>
       </view>
