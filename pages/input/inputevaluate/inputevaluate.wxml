@@ -3,7 +3,7 @@
   <view class='item' bindtap='drink'>
     <view class="paddinghalfrem card-content">
       <image wx:if="{{drinklab}}" class='image-profile' mode='aspectfill' src='../../../image/add.png' />
-      <image wx:else class='image-profile' mode='aspectfill' src='../../../image/bp.png' />
+      <image wx:else class='image-profile' mode='aspectfill' src='../../../image/confirm.png' />
         <text class='texttitle4'>是否饮酒</text>
     </view>
   </view>
@@ -22,7 +22,8 @@
 
   <view class='item' bindtap='smoke'>
     <view class="paddinghalfrem card-content">
-      <image class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:if="{{smokelab}}" class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:else class='image-profile' mode='aspectfill' src='../../../image/confirm.png' />
         <text class='texttitle4'>是否吸烟</text>
     </view>
   </view>
@@ -35,13 +36,14 @@
     </view>
    <view class="modal-footer">
       <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
-      <view class="btn-confirm" >确定</view>
+      <view class="btn-confirm" bindtap='confirmsmoke'>确定</view>
    </view>
   </view>
 
   <view class='item' bindtap='diabetes'>
     <view class="paddinghalfrem card-content">
-      <image class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:if="{{diabeteslab}}" class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:else class='image-profile' mode='aspectfill' src='../../../image/confirm.png' />
         <text class='texttitle'>有无糖尿病</text>
     </view>
   </view>
@@ -54,13 +56,14 @@
     </view>
    <view class="modal-footer">
       <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
-      <view class="btn-confirm" >确定</view>
+      <view class="btn-confirm" bindtap='confirmdiabetes'>确定</view>
    </view>
   </view>
 
   <view class='item' bindtap='tbc'>
     <view class="paddinghalfrem card-content">
-      <image class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:if="{{tbclab}}" class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:else class='image-profile' mode='aspectfill' src='../../../image/confirm.png' />
         <text class='texttitle'>血总胆固醇</text>
     </view>
   </view>
@@ -73,13 +76,14 @@
     </view>
    <view class="modal-footer">
       <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
-      <view class="btn-confirm" >确定</view>
+      <view class="btn-confirm" bindtap='confirmtbc'>确定</view>
    </view>
   </view>
 
   <view class='item' bindtap='Hdlc'>
     <view class="paddinghalfrem card-content">
-      <image class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:if="{{Hdlclab}}" class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:else class='image-profile' mode='aspectfill' src='../../../image/confirm.png' />
         <text class='texttitle2'>高密度脂蛋白胆固醇</text>
     </view>
   </view>
@@ -92,13 +96,14 @@
     </view>
    <view class="modal-footer">
       <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
-      <view class="btn-confirm" >确定</view>
+      <view class="btn-confirm" bindtap='confirmHdlc'>确定</view>
    </view>
   </view>
 
   <view class='item' bindtap='Bheight'>
     <view class="paddinghalfrem card-content">
-      <image class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:if="{{Bheightlab}}" class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:else class='image-profile' mode='aspectfill' src='../../../image/confirm.png' />
         <text class='texttitle3'>身高</text>
     </view>
   </view>
@@ -111,13 +116,14 @@
     </view>
    <view class="modal-footer">
       <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
-      <view class="btn-confirm" >确定</view>
+      <view class="btn-confirm" bindtap='confirmBheight'>确定</view>
    </view>
   </view>
 
   <view class='item' bindtap='Bweight'>
     <view class="paddinghalfrem card-content">
-      <image class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:if="{{Bweightlab}}" class='image-profile' mode='aspectfill' src='../../../image/add.png' />
+      <image wx:else class='image-profile' mode='aspectfill' src='../../../image/confirm.png' />
         <text class='texttitle3'>体重</text>
     </view>
   </view>
@@ -130,7 +136,7 @@
     </view>
    <view class="modal-footer">
       <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
-      <view class="btn-confirm" >确定</view>
+      <view class="btn-confirm" bindtap='confirmBweight'>确定</view>
    </view>
   </view>
 

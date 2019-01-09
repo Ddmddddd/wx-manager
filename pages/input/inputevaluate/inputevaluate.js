@@ -15,6 +15,12 @@ Page({
     showBheight:false,
     showBweight:false,
     drinklab:true,
+    smokelab:true,
+    diabeteslab:true,
+    tbclab:true,
+    Hdlclab:true,
+    Bheightlab:true,
+    Bweightlab:true,
   },
   tbc:function(){
     this.setData({
@@ -69,7 +75,51 @@ Page({
   },
 
   confirmdrink:function(){
-    drinklab:false,
+    this.setData({
+      drinklab:false,
+    })
+    this.hideModal();
+  },
+
+  confirmsmoke:function(){
+    this.setData({
+      smokelab:false,
+    })
+    this.hideModal();
+  },
+
+  confirmdiabetes:function () {
+    this.setData({
+      diabeteslab: false,
+    })
+    this.hideModal();
+  },
+
+  confirmtbc: function () {
+    this.setData({
+      tbclab: false,
+    })
+    this.hideModal();
+  },
+
+  confirmHdlc: function () {
+    this.setData({
+      Hdlclab: false,
+    })
+    this.hideModal();
+  },
+
+  confirmBheight: function () {
+    this.setData({
+      Bheightlab: false,
+    })
+    this.hideModal();
+  },
+
+  confirmBweight: function () {
+    this.setData({
+      Bweightlab: false,
+    })
     this.hideModal();
   },
 
