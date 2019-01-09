@@ -14,6 +14,7 @@ Page({
     showHdlc:false,
     showBheight:false,
     showBweight:false,
+    drinklab:true,
   },
   tbc:function(){
     this.setData({
@@ -64,6 +65,11 @@ Page({
     });
   },
   onCancel: function () {
+    this.hideModal();
+  },
+
+  confirmdrink:function(){
+    drinklab:false,
     this.hideModal();
   },
 
